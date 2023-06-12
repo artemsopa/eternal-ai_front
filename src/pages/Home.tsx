@@ -3,15 +3,15 @@ import { styled } from "solid-styled-components";
 
 import Background from "@/assets/images/backgrounds/main.png";
 
-import Layout from "@/layouts/Layout";
+import DefaultLayout from "@/layouts/DefaultLayout";
 
-import IndividualItem from "@/components/home/IndividualItem";
+import IndividualItem from "@/components/individuals/IndividualItem";
 import Questions from "@/components/home/Questions";
 
 import { individualsList } from "@/data/individualsList";
 
 const Home: Component = () => (
-  <Layout>
+  <DefaultLayout>
     <Main>
       <Banner src={Background} />
       <QuestionnsWrapper>
@@ -31,7 +31,7 @@ const Home: Component = () => (
         </IndividualsList>
       </IndividualsWrapper>
     </Main>
-  </Layout>
+  </DefaultLayout>
 );
 
 export default Home;
@@ -56,7 +56,7 @@ const QuestionnsWrapper = styled.div`
   right: 0;
   margin: 0px auto;
   width: fit-content;
-  z-index: 2;
+  z-index: 1;
 `;
 
 const IndividualsWrapper = styled.div`

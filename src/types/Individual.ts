@@ -3,4 +3,5 @@ export interface Individual {
   background: string;
   name: string;
   about: string;
+  href: string;
 }

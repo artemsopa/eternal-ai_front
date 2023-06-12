@@ -1,6 +1,6 @@
-import { For } from "solid-js";
-import type { Component } from "solid-js";
+import { Component, For } from "solid-js";
 import { styled } from "solid-styled-components";
+
 import { questionsList } from "@/data/questionsList";
 
 const Questions: Component = () => {
@@ -94,4 +94,25 @@ const QuestionItem = styled.li`
   letter-spacing: -0.01em;
   color: #ffffff;
   cursor: pointer;
+
+  z-index: 0;
+  position: relative;
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 120px;
+    padding: 1px;
+    background: linear-gradient(
+      281.4deg,
+      rgba(248, 45, 152, 0.4) -2.34%,
+      rgba(88, 51, 239, 0.4) 114.41%
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 `;

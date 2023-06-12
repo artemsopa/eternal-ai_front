@@ -14,6 +14,7 @@
   "parserOptions": { "project": ["./tsconfig.json"] },
   "plugins": ["@typescript-eslint", "solid"],
   "rules": {
+    "solid/reactivity": "off",
     "solid/no-destructure": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
@@ -22,6 +23,7 @@
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
     "@typescript-eslint/no-unsafe-member-access": "off"
   }
 }
